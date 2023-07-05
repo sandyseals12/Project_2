@@ -1,0 +1,52 @@
+# Crowdfunding Data Processing
+
+This repository contains code for processing crowdfunding data, including campaigns and contact information. The code performs various data cleaning and transformation tasks using pandas and numpy libraries in Python.
+
+## Dataset
+
+The dataset consists of two Excel files:
+
+1. `crowdfunding.xlsx`: Contains information about crowdfunding campaigns.
+2. `contacts.xlsx`: Contains contact information related to the campaigns.
+
+## Data Processing Steps
+
+1. **Crowdfunding Data**
+
+   - Read the `crowdfunding.xlsx` file into a Pandas DataFrame.
+   - Split the "category & sub-category" column into separate "category" and "subcategory" columns.
+   - Create new category and subcategory columns with unique IDs.
+   - Export the category and subcategory data as CSV files.
+   - Rename columns and convert data types as required.
+   - Clean the data and merge with the category and subcategory information.
+   - Drop unnecessary columns.
+   - Export the cleaned campaign data as a CSV file.
+
+2. **Contact Information**
+
+   - Read the `contacts.xlsx` file into a Pandas DataFrame.
+   - Iterate through the DataFrame and convert each row to a dictionary.
+   - Create a new DataFrame with the contact information.
+   - Split the "name" column into separate "first_name" and "last_name" columns.
+   - Reorder the columns.
+   - Export the cleaned contact information as a CSV file.
+
+## Files
+
+- `crowdfunding_info_df.ipynb`: Jupyter Notebook containing the code for processing crowdfunding data.
+- `Resources/`: Directory containing the input Excel files and the exported CSV files.
+    - `crowdfunding.xlsx`: Input file with crowdfunding campaign information.
+    - `contacts.xlsx`: Input file with contact information.
+    - `category.csv`: Exported category information.
+    - `subcategory.csv`: Exported subcategory information.
+    - `campaign.csv`: Exported cleaned campaign data.
+    - `contacts.csv`: Exported cleaned contact information.
+
+## Usage
+
+1. Install the required dependencies: pandas and numpy.
+2. Place the input Excel files (`crowdfunding.xlsx` and `contacts.xlsx`) in the `Resources/` directory.
+3. Run the code in the `crowdfunding_info_df.ipynb` Jupyter Notebook to process the data.
+4. The processed data will be exported as CSV files in the `Resources/` directory.
+
+Nathaniel Eric Seals
